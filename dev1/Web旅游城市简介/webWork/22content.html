@@ -1,0 +1,359 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>22content</title>
+<link rel="stylesheet" href="22content.css">
+<link rel="stylesheet" href="font_cqbiizu5og9/iconfont.css">
+<!-- Fontawesome CDN Link -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+<style>
+	.aa li{
+		display:inline;
+		text-align: center;
+    	float: left;
+    	width: 112px;
+		float:left;
+	}
+	a{
+		text-decoration: none;
+		color: #0E9A1E;
+		padding: 20px;
+	}
+	</style>
+</head>
+
+<body>
+<table border="0" cellspacing="0" align="center">
+	<tr>
+		<td background="../imag/IMG_20220605_232334_edit_28846657248723.jpg" height="408" width="1250">
+	</tr>
+</table>
+	
+<div id="con">
+	<section>
+    <div class="container">
+      <div class="icons">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+      </div>
+      <div class="time">
+        <div class="time-colon">
+          <div class="time-text" style="color: #08D681">
+			 <span class="localtime">北京时间</span>
+			 <span class="colon">:</span>
+            <span class="num hour_num">08</span>
+            <span class="text">Hours</span>
+			<span class="colon">:</span>
+			
+			<span class="num min_num">45</span>
+            <span class="text">Minutes</span>
+			<span class="colon">:</span>
+			  
+			<span class="num sec_num">06</span>
+            <span class="text">Seconds</span>
+			  <span class="am_pm">AM</span>
+        </div>
+        
+      </div>
+     </div>
+	</div>
+	
+  
+
+    <script>
+  let section = document.querySelector("section"),
+  icons = document.querySelector(".icons");
+
+  icons.onclick = ()=>{
+    section.classList.toggle("dark");
+  }
+
+  // 创建一个函数并在每秒钟内调用它
+  setInterval(()=>{
+
+    let date = new Date(),
+    hour = date.getHours(),
+    min = date.getMinutes(),
+    sec = date.getSeconds();
+
+    let d;
+    d = hour < 12 ? "AM" : "PM"; //如果小时小于 12，则其值将为 AM，否则其值将为 pm
+    hour = hour > 12 ? hour - 12 : hour; //如果小时值大于12大于12将被减去（通过这样做，我们将得到值直到12而不是13，14或24）
+    hour = hour == 0 ? hour = 12 : hour; // 如果小时值为 0，则值将为 12
+
+    // 将所有值的前面加上 0（如果它们将小于 10）
+    hour = hour < 10 ? "0" + hour : hour;
+    min = min < 10 ? "0" + min : min;
+    sec = sec < 10 ? "0" + sec : sec;
+
+    document.querySelector(".hour_num").innerText = hour;
+    document.querySelector(".min_num").innerText = min;
+    document.querySelector(".sec_num").innerText = sec;
+    document.querySelector(".am_pm").innerText = d;
+
+  }, 1000); // 1000 毫秒 = 1 秒
+
+  </script>
+	
+	<div id="menu">
+		  <div id="globlelink">
+	    <ul>
+		    <li><a href="#">HOME</a></li>
+			<li><a href="#news">新闻热点</a></li>
+		    <li><a href="#play">游张家界</a></li>
+		    <li><a href="#watch">游客中心</a></li>
+			<li><a href="#foot">联系我们</a></li>
+
+
+		  </ul>
+	
+	
+	  </div>
+	
+	</div>
+
+	<div id="news" style="color:#67F66B" align="center" >
+	<div class="aa">
+	<dic class="b"> </dic>
+	<div class="c">
+		<div class="d">
+		<h1>热点新闻</h1>
+			<h3>张家界实时动态 随时了解张家界市情</h3>
+			<table width="1220" border="0" cellspacing="0" cellpadding="0">
+			<tr><th>六月详情</th>
+				<td><h3>“阳光少年”来到黄龙洞<a href="" style="color: #E0D6D6">了解更多</a>
+					</h3></td>
+			</tr>
+			<tr><th>五月详情</th>
+				<td><h3>疫情后张家界的旅游恢复<a href="" style="color: #E0D6D6">了解更多</a></h3></td>
+			</tr>
+			<tr><th>四月详情</th>
+				<td><h3>灯剑调研张家界国家森林公园<a href="" style="color: #E0D6D6">了解更多</a></h3></td>
+			</tr>
+			</table>
+		</div>
+	  </div>
+	</div>
+  
+
+</div>
+	
+	<div id="play" style="color:#2FBFEB" align="center" style="width: 1000px,height:800px">
+		<br>
+		<br>
+		<br>
+		<h1> 玩转张家界</h1>
+	  <h3>深入了解张家界吃住旅购娱</h3>
+
+
+	<div class="a">
+	<dic class="bb"> </dic>
+	<div class="cc">
+		<div class="dd">
+		
+		  <table width="800" border="0" cellspacing=1 cellpadding="0",align="center">
+			<tr><th>酒店</th>
+				<th>美食</th>
+			  	<th>交通</th>
+			    <th>门票</th>
+				<th>定制</th>
+			</tr>
+		  </table>
+		</div>
+	  </div>
+	</div>
+</div>
+
+	<div class="card">
+		<input name="select" type="radio" class="btn" id="slide_1" checked>
+		<input type="radio" name="select" id="slide_2">
+		<input type="radio" name="select" id="slide_3">
+		<input type="radio" name="select" id="slide_4">
+		<input type="radio" name="select" id="slide_5">
+		<input type="checkbox" id="slide_img">
+		
+		<div class="slide">
+			<lable for="slide_1" class="slide_btn_1"></lable>
+			<lable for="slide_2" class="slide_btn_2"></lable>
+			<lable for="slide_3" class="slide_btn_3"></lable>
+			<lable for="slide_4" class="slide_btn_4"></lable>
+			<lable for="slide_5" class="slide_btn_5"></lable>
+		</div>
+        <!--主体内容-->
+		<div class="cardcon">
+			<label for="slide_img" class="pic">
+			  <img src="../imag/mmexport1654333885265.jpg" alt="" class="img_1">
+			</label>
+			<div class="txt txt_1">
+				<h2 class="tit">酒店</h2>
+				<p class="info">景区门票站附近住宿索溪峪景区附近各种档次的宾馆一应俱全，选择余地很大。索溪峪位于天子山、黄龙洞、宝峰湖等众多景点的中心位置，前往各景点交通极为方便，是宾馆聚集地，但距离火车站及飞机场有近40km的路程。</p>
+				<button class="btn">了解更多</button>
+			</div>
+		</div>
+		<div class="cardcon">
+			<label for="slide_img" class="pic">
+				<img src="../imag/Collage_20220604_163159.jpg" alt="" class="img_2">
+			</label>
+			<div class="txt txt_2">
+				<h2 class="tit">美食</h2>
+				<p class="info">张家界的土家族饮食既具有浓厚的民族特色，又融合了湘菜的精华。辣，是湖南菜的特色，土家菜也不例外。
+					除了辣以外，土家人还特别钟爱腊、酸、腌制菜食，风味独特。
+				</p>
+				<button class="btn">了解更多</button>
+			</div>
+		</div>
+		<div class="cardcon">
+			<label for="slide_img" class="pic">
+				<img src="../imag/Screenshot_20220604_164410.jpg" alt="" class="img_3">
+			</label>
+			<div class="txt txt_3">
+				<h2 class="tit">交通</h2>
+				<p class="info">近年来，张家界市武陵源区交通运输局积极“建好、管好、护好、运营好”农村公路，畅通“主动脉”，疏通“毛细血管”，完善路网构架，推动“交通+旅游”“交通+产业”，助力乡村振兴驶入“快车道”</p>
+				<button class="btn">了解更多</button>
+			</div>
+		</div>
+		<div class="cardcon">
+			<label for="slide_img" class="pic">
+				<img src="../imag/mmexport1654332394058.png" alt="" class="img_4">
+			</label>
+			<div class="txt txt_4">
+				<h2 class="tit">门票</h2>
+				<p class="info">4月24日张家界“官宣”：4月30日—5月10日，张家界市武陵源景区、天门山景区、大峡谷景区、九天峰恋景区，将对湖南省内居民实行景区门票免票优惠，只要您的身份证号码是43开头或者身份证上的住址是湖南省内，也或者您属于在湖南省内工作、学习、旅居的非湖南户籍人员（以入湘满14天的行程卡证明为依据），这个五一就可以免费畅游张家界！</p>
+				<button class="btn">了解更多</button>
+			</div>
+		</div>
+		<div class="cardcon">
+			<label for="slide_img" class="pic">
+				<img src="../imag/mmexport1654332533071.jpg" alt="" class="img_5">
+			</label>
+			<div class="txt txt_5">
+				<h2 class="tit">定制</h2>
+				<p class="info">春天的张家界落英缤纷，溯金鞭溪，游十里画廊，探黄龙洞，体会武陵人进入桃花源的惊喜。推荐金鞭溪、十里画廊、黄龙洞、宝峰湖。秋天的张家界天高云淡，层林尽染，此时正是猕猴桃、蜜橘等美味水果成熟的时节。推荐天子山、袁家界、西海、凤栖山。</p>
+				<button class="btn">了解更多</button>
+			</div>
+		</div>
+		
+  </div>
+
+	<div id="watch" style="color:#67F66B" align="center">
+	<div class="a">
+		<br>
+		<h1>绝版张家界</h1>
+		<h3>360度感受张家界的绝版风格</h3>
+	<div id="video">
+		<video width="640" height="480" controls="controls">
+		<source src="../imag/1916763046.mp4" type="video/mp4">
+		您播放的视频失败
+		</video>
+		<h5 style="color: darkseagreen" >---视频出自小柚子~</h5>
+	</div>	
+	</div>
+		
+	<table style="margin-top: 50px">
+	<tr>
+	<td background="../imag/mmexport1654258779342.jpg" width="240" height="240" >
+	<td>
+		
+		<h5 style="width:480px">北纬30°线是一条神奇的纬线，
+不仅贯穿世界上四大文明古国，而且串起了地球上许多神秘的境界:诡秘的百慕大三角，庄严的埃及金字塔，传说中沉没的大西洲，有世界屋脊之称的珠穆朗玛峰...........<br> 
+张家界武陵源也在这条神奇的纬线上。<br>
+希望你能和志同道合的人一起，走遍这大千世界，看尽这世间繁华。对张家界来说，这样的国际知名度来自于“武陵源”——这是中国最负盛名的风景区之一，超过3000座峻峭的石英砂岩柱耸立在城市北面的山区之中，金鞭溪、琵琶溪、索溪环绕其间，“奇峰三千，八百秀水”正是最精当简要的描述。</h5>
+	</td>
+	<td background="../imag/mmexport1654259634982.jpg" width="240" height="240">
+	</td>
+	<td>
+	<a href="https://fashion.sina.cn/l/ds/2022-05-19/detail-imcwiwst7912367.d.html">更多</a>
+	</td>
+	</tr>	
+	</table>
+</div>
+	
+	<div class="piccon">
+ <div class="picture">
+	<div class="imgBx">
+		<img src="../imag/mmexport1654256085085.jpg">
+	</div>
+	<div class="content">
+		<h3>神山仙境</h3>
+		<p>张家界武陵源是国家重点风景名胜区，国家首批5a级旅游景区，位于湖南省西北部武陵源山脉中段桑植县、慈利县交界处，隶属 张家界市武陵源区 。 由张家界国家森林公园和国家地质公园、索溪峪、天子山、杨家界四部分组成。 总面积369平方公里，其中，中心景区面积264平方公里，属砂岩峰林地貌，素以峰、谷、水、林、洞著称。</p>
+		
+	</div>
+ </div>
+ <div class="picture">
+	<div class="imgBx">
+		<img src="../imag/mmexport1654301982578.jpg">
+	</div>
+	<div class="content">
+		<h3>极限不止</h3>
+		<p>每年都有来自全国各地的极限运动爱好者齐聚张家界大峡谷景区，在玻璃桥上共同竞技。“UCI—世界杯，世锦赛—山地车世界锦标赛 ，rampage—红牛坠山赛，Crankworx—曲柄工坊山地车嘉年华”这四个赛事是世界上并列的四大山地车速降（DH）赛事。本次参赛选手14名国外选手都参加过这四个赛事。</p>
+		
+	</div>
+ </div>
+  <div class="picture">
+	<div class="imgBx">
+		<img src="../imag/mmexport1654301955470.jpg">
+	</div>
+	<div class="content">
+		<h3>浪漫起源</h3>
+		<p>天子山因明初土家族领袖向大坤自号“向王天子”而得名，在这里有机会可以观赏到云雾、月夜、霞日、冬雪四大奇观。
+亿万年前的天子山是一片汪洋大海，后来经过复杂而漫长的地质过程，形成了御笔峰等奇异的地质景观。</p>
+		
+	</div>
+ </div>
+
+</div>
+	
+</section>
+	
+	<div class="blurryb">
+		<div class="blurrycon">
+			<div class="layer1"></div>
+			<div class="layer2"></div>
+		</div>
+	</div>
+	
+	<div class="blurryb">
+		<div class="blurrycon">
+			<div class="layer3"></div>
+			<div class="layer4"></div>
+		</div>
+	</div>
+
+	<div class="shell">
+        <a href="" class="box"><i class="iconfont icon-liebiao"></i><span>list</span></a>
+        <a href="#" class="box"><i class="iconfont icon-cangku"></i><span>首页</span></a>
+        <a class="box"><i class="iconfont icon-zhuti_tiaosepan"></i><span>主题</span></a>
+        <a href="#watch" class="box"><i class="iconfont icon-tupian"></i><span>图片</span></a>
+        <a href="#" class="box"><i class="iconfont icon-dunpaibaoxianrenzheng"></i><span>客服</span></a>
+        <a href="1Login.html" class="box"><i class="iconfont icon-dengchu"></i><span>退出</span></a>
+    </div>
+</div>
+
+<div id="foot">
+		<p>
+			<br>
+			<a>软件2002 王予 QQ:2667657399</a>
+			<br>
+			
+			<a>感谢互联网 学习通 bilibili 的视频教学</a><br>
+			<a href="2content.html">只为宣传我的家乡张家界 欢迎更多的人前来了解</a>
+		</p>
+	</div>
+	
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
